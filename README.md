@@ -1,0 +1,1 @@
+A recipe web app in React that allows you to input a list of ingredients on hand and send that list to a Claude AI API. The AI automatically generates a suggested recipe based on those ingredients that is then displayed dynamically on the web app. Tech: React, Claude AI, HTML

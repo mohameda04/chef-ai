@@ -8,9 +8,7 @@ export default function Main() {
         <li key={ingredient}>{ingredient}</li>
     ))
     
-    function handleSubmit(event) {
-        event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+    function addIngredient(formData) {
         const newIngredient = formData.get("ingredient")
         setIngredients(ingredients => [...ingredients, newIngredient])
     }
@@ -19,7 +17,7 @@ export default function Main() {
         <main>
         <h1>Welcome to Chef AI</h1>
         <p>Your personal AI-powered cooking assistant.</p>
-        <form onSubmit={handleSubmit} className="ingredient-form"> 
+        <form action={addIngredient} className="ingredient-form"> 
             <input 
                 type="text"
                 placeholder="e.g. parsley"
